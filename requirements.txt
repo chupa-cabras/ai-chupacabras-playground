@@ -1,0 +1,4 @@
+openai==1.30.4
+azure-identity==1.16.0
+crewai==0.22.5
+crewai-tools==0.1.1
