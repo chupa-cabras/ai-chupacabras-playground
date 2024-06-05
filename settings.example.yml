@@ -1,0 +1,8 @@
+models:
+  gpt_azure_4o:
+    endpoint: https://?????????.openai.azure.com/
+    deployment: gpt-4o-deploy
+    chat_deployment_region: eastus
+    api_version: 2024-02-15-preview
+    key: $AZURE_OPENAI_KEY
+
