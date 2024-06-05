@@ -1,54 +1,16 @@
 import os
-
-from langchain_openai import AzureChatOpenAI
 from langchain.callbacks import get_openai_callback
-from dotenv import find_dotenv, load_dotenv
 from crewai import Agent, Task, Crew
+from models.factory import Factory
 
 
-#Instance Model
-load_dotenv(find_dotenv())
-
-# azure_llm = AzureChatOpenAI(
-#     azure_endpoint=os.environ.get("AZURE_OPENAI_ENDPOINT"),
-#     api_key=os.environ.get("AZURE_OPENAI_KEY"),
-#     validate_base_url=True,
-# )
-
-azure_llm = AzureChatOpenAI(
-    azure_endpoint=os.environ.get("AZURE_OPENAI_ENDPOINT"),
-    api_key=os.environ.get("AZURE_OPENAI_KEY"),
-    deployment_name=os.environ.get("AZURE_OPENAI_DEPLOYMENT"),
-    openai_api_version=os.environ.get("AZURE_OPENAI_VERSION"),
-    openai_api_type="azure"
-)
-
-# llm = AzureChatOpenAI(
-#     azure_endpoint=os.environ.get("AZURE_OPENAI_ENDPOINT"),
-#     api_key=os.environ.get("AZURE_OPENAI_KEY"),
-#     openai_api_type="azure",
-#     openai_api_version=os.environ.get("OPENAI_API_VERSION"),
-# )
-
-
-
-
+azure_llm = Factory().create('gpt_azure_4o')
 
 with get_openai_callback() as cb:
     print(f"Total Tokens: {cb.total_tokens}")
     print(f"Prompt Tokens: {cb.prompt_tokens}")
     print(f"Completion Tokens: {cb.completion_tokens}")
     print(f"Total Cost (USD): ${cb.total_cost}")
-
-# with get_openai_callback() as cb:
-#     model.invoke([message])
-#     print(
-#         f"Total Cost (USD): ${format(cb.total_cost, '.6f')}"
-#     )  # without specifying the model version, flat-rate 0.002 USD per 1k input and output tokens is used
-
-
-# Instantiate Tools
-#website_search_tool = WebsiteSearchTool()
 
 
 #Instance Agents 

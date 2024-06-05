@@ -12,31 +12,24 @@ This project serves as an AI playground for testing and experimenting with vario
     ```bash
     cd ai-chupacabras-playground
     ```
-* Create a virtual Python environment:
-    ```shell
-    python3 -m venv development
-    ```
-* Activate the virtual environment:
-    ```shell
-    source development/bin/activate
-    ```
-    for (for FISH terminals)
-    ```shell
-    source development/bin/activate.fish
-    ```
-* Install the required dependencies:
-    ```shell
-    pip install -r requirements.txt
-    ```
+* Rename and update the content of files:
+    * settings.example.yml
+    * .env.example
 
 ## Usage
-1. Navigate to the project directory:
+* Navigate to the project directory:
     ```bash
     cd ai-chupacabras-playground
     ```
-2. Run the main script:
+* Run the main script:
     ```bash
-    python main.py
+    poetry run python3 -m plays.**********
+    ```
+
+## Testing
+To run the tests, use the following command:
+    ```bash
+    poetry run python3 -m tests.dependencies      
     ```
 
 ## Contributing
