@@ -5,4 +5,5 @@ models:
     chat_deployment_region: eastus
     api_version: 2024-02-15-preview
     key: $AZURE_OPENAI_KEY
-
+  gemini_15pro:
+    key: $GOOGLE_API_KEY
