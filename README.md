@@ -21,13 +21,25 @@ This project serves as an AI playground for testing and experimenting with vario
     ```bash
     cd ai-chupacabras-playground
     ```
+* Install:
+    ```bash
+    poetry install
+    ```    
 * Run the main script:
     ```bash
     poetry run python3 -m plays.**********
     ```
+* Available plays:
+    ```bash 
+    poetry run python3 -m plays.environment_analyzer
+    poetry run python3 -m plays.crew_ai_example
+    poetry run python3 -m plays.job_description_generator
+    ```
+
+
 
 ## Testing
-To run the tests, use the following command:
+* To run the tests, use the following command:
     ```bash
     poetry run python3 -m tests.dependencies      
     ```

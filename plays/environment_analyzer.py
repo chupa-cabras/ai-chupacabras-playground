@@ -25,8 +25,6 @@ def wait_for_files_active(files):
   print("...all files ready")
   print()
 
-# Create the model
-# See https://ai.google.dev/api/python/google/generativeai/GenerativeModel
 generation_config = {
   "temperature": 1,
   "top_p": 0.95,
@@ -40,13 +38,10 @@ model = genai.GenerativeModel(
   generation_config=generation_config
 )
 
-# TODO Make these files available on the local file system
-# You may need to update the file paths
 files = [
   upload_to_gemini("tmp/environment_analyzer_example.mp4", mime_type="video/mp4"),
 ]
 
-# Some files have a processing delay. Wait for them to be ready.
 wait_for_files_active(files)
 
 chat_session = model.start_chat(
