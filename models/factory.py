@@ -1,5 +1,7 @@
 import os
 from langchain_openai import AzureChatOpenAI
+import google.generativeai as genai
+
 from models.llm_settings import LLM_Settings
 
 class Factory:
@@ -24,3 +26,8 @@ class Factory:
             )
 
             return model
+        return None
+        
+
+
+
