@@ -7,3 +7,5 @@ models:
     key: $AZURE_OPENAI_KEY
   gemini_15pro:
     key: $GOOGLE_API_KEY
+  openai_text_embedding_3_small:
+    key: $OPENAI_API_KEY
