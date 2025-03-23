@@ -163,3 +163,4 @@ cython_debug/
 
 development/
 settings.yml
+tmp/*
